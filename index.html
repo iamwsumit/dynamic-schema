@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Schema</title>
+  <link rel="icon" href="/images/icon.png">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:site_name" content="Generate Schema" />
+  <meta property="og:image" content="https://sumitkmr.com/images/icon.png" />
+  <meta property="og:description" content="Generate schema for dynamic component with layout design." />
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="body">
+    <div class="container">
+      <h1>Generate Schema</h1>
+      <p>Upload your aia and enter the screen name which contains the design</p>
+      <div class="inputContainer">
+        <input type="file" accept=".aia" id="upload-file" class="input-field" placeholder="Upload AIA File">
+        <input id="form" type="text" placeholder="Screen Name">
+        <input id="author" type="text" placeholder="Author Name">
+        <div style="padding: 2px;"></div>
+        <div style="padding: 2px;"></div>
+        <button onclick="onSubmit()" id="submit" type="button">Generate Schema</button>
+        <div id="alert" class="error">
+          <i id="icon" class="fa fa-times-circle"></i>
+          <p id="message">Error Message</p>
+        </div>
+      </div>
+    </div>
+    <div id="wrapper">
+      <pre class='code code-css'><label>JSON</label><code id="beautified"></code></pre>
+    </div>
+  </div>
+
+</body>
+
+</html>
