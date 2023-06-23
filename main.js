@@ -71,7 +71,7 @@ function rearrangeJson(componentJson) {
                 if (value[0] === '{' && value[len - 1] === '}') {
                     KEYS.push(value.substring(1, len - 1));
                 }
-                if (value.substring(0, 3) === '&HF') {
+                if (value.substring(0, 2) === '&H') {
                     value = buildColor(value);
                 }
             }
