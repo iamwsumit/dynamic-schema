@@ -26,7 +26,14 @@ function enableButton(text) {
 }
 
 function buildColor(colorCode) {
-  const intValue = parseInt(colorCode.substr(1), 16); // Remove the '#' symbol before converting
+  var alpha = parseInt(androidColor.substr(1, 2), 16);
+  var red = parseInt(androidColor.substr(3, 2), 16);
+  var green = parseInt(androidColor.substr(5, 2), 16);
+  var blue = parseInt(androidColor.substr(7, 2), 16);
+  
+  // Combine the color components into a single integer value
+  var intValue = (alpha << 24) | (red << 16) | (green << 8) | blue;
+  
   return intValue;
 }
 
