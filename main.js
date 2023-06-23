@@ -25,7 +25,7 @@ function enableButton(text) {
     button.style.backgroundColor = '#275EFE';
 }
 
-function buildColor(colorCode) {
+function buildColor(androidColor) {
   var alpha = parseInt(androidColor.substr(1, 2), 16);
   var red = parseInt(androidColor.substr(3, 2), 16);
   var green = parseInt(androidColor.substr(5, 2), 16);
