@@ -25,6 +25,11 @@ function enableButton(text) {
     button.style.backgroundColor = '#275EFE';
 }
 
+function buildColor(colorCode) {
+  const intValue = parseInt(colorCode.substr(1), 16); // Remove the '#' symbol before converting
+  return intValue;
+}
+
 var KEYS = [];
 var EXTENSIONS = {};
 
